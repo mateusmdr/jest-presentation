@@ -20,7 +20,8 @@ export const grausParaRadianos = (angulo: number) => {
  * 
  * @param x Valor do ângulo
  * @param n Termo do polinômio
- * @returns N-ésimo termo do polinômio de taylor da função cos(x) em torno do ponto x = 0
+ * @returns N-ésimo termo do polinômio de taylor da
+ *  função cos(x) em torno do ponto x = 0
  */
  export const taylorCosseno = (x: number, n: number) => {
     return (-1)**(n) * x**(2*n) / fatorial(2*n);
