@@ -15,3 +15,9 @@ test("Cosseno de 60 graus deveria ser próximo de 0.5", () => {
 test("Cosseno de pi rad deveria ser próximo de -1", () => {
     expect(cos(Math.PI)).toBeCloseTo(-1, 4)
 })
+
+test("Cosseno dos múltiplos de 2pi deveria ser próximo de 1", () => {
+    for(let c = 1; c<50;c++) {
+        expect(cos(c*2*Math.PI)).toBeCloseTo(1,4)
+    }
+})

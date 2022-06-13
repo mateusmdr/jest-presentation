@@ -33,10 +33,10 @@ export const grausParaRadianos = (angulo: number) => {
  * @param graus Verdadeiro se ângulo for fornecido em graus
  * @param erro Taxa de erro
  */
-export const cos = (angulo: number, graus: boolean = false, erro: number = 10**(-4)) : number => {
+export const cos = (angulo: number, graus: boolean = false, erro: number = 10**(-5)) : number => {
     if(erro <= 0) throw new RangeError("A taxa de erro deve ser positiva");
 
-    const rad = graus ? grausParaRadianos(angulo) : angulo;
+    const rad = graus ? grausParaRadianos(angulo % 360) : angulo % (2*Math.PI);
 
     let soma: number = 0;
     let termo: number;
